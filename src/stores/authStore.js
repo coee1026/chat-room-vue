@@ -4,7 +4,7 @@ import { defineStore } from 'pinia'
 export const useAuthStore = defineStore(
   'auth',
   () => {
-    const token = ref('haha')
+    const token = ref('')
     const setToken = (t) => (token.value = t)
     const account = ref('')
     const setAccount = (a) => {
