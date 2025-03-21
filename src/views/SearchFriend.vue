@@ -31,7 +31,10 @@ const add = (id) => {
 
 <template>
   <div class="search">
-    <div class="title">查询列表</div>
+    <div class="back" @click="$router.go(-1)">
+      <el-icon><ArrowLeftBold /></el-icon>
+    </div>
+    <div class="title">搜索结果</div>
     <div class="list">
       <div class="item" v-for="item in userList" :key="item.id">
         <div class="account">{{ item.account }}</div>
@@ -45,10 +48,9 @@ const add = (id) => {
 
 <style lang="scss" scoped>
 .search {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* 标准语法 */
+  .back {
+    cursor: pointer;
+  }
   .list {
     .item {
       display: flex;

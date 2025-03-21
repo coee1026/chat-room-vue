@@ -34,6 +34,9 @@ const doReceive = async () => {
 </script>
 <template>
   <div class="chat">
+    <div class="back" @click="$router.go(-1)">
+      <el-icon><ArrowLeftBold /></el-icon>
+    </div>
     <div class="title">聊天列表</div>
     <div class="p">{{ account }}</div>
     <div class="send">
@@ -63,6 +66,9 @@ const doReceive = async () => {
 </template>
 <style lang="scss" scoped>
 .chat {
+  .back {
+    cursor: pointer;
+  }
   .title {
     margin: 20px 0 12px;
   }
